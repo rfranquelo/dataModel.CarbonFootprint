@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$schemaVersion": "0.0.1",
+  "$id": "https://smart-data-models.github.io/Environment/CarbonFootprint/schema.json",
+  "title": "Smart Data models - CarbonFootprint schema",
+  "modelTags": "Carbon, Emissions, CO2eq",
+  "description": "Data model to represent the carbon footprint in CO2 equivalents.",
+  "type": "object",
+  "required": ["id", "type"],
+  "allOf": [
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+    },
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    },
+    {
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier of the entity."
+        },
+        "type": {
+          "type": "string",
+          "description": "Entity type (default: CarbonFootprint)."
+        },
+        "emissionSource": {
+          "type": "string",
+          "description": "Source of emissions (e.g., Transport, Energy, Industry)."
+        },
+        "CO2eq": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Property. Model:'https://schema.org/Number'. Amount of emissions in tons of CO2 equivalent."
+        },
+        "emissionDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Property. Model:'https://schema.org/Text'. Date and time of the measurement."
+        },
+        "location": {
+          "type": "object",
+          "description": "GeoProperty. Geographic coordinates where the emissions were generated.",
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": ["Point"]
+            },
+            "coordinates": {
+              "type": "array",
+              "items": {"type": "number"}
+            }
+          }
+        },
+        "relatedSource": {
+          "type": "string",
+          "format": "uri",
+          "description": "Relationship. Reference to the data source or related entity."
+        },
+        "description": {
+          "type": "string",
+          "description": "Additional information about the emissions source."
+        },
+        "tags": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "Tags associated with the carbon footprint calculation."
+        }
+      }
+    }
+  ],
+  "license": "MIT"
+}

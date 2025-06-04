@@ -18,15 +18,15 @@
       "properties": {
         "id": {
           "type": "string",
-          "description": "Unique identifier of the entity."
+          "description": "Property. Unique identifier of the entity."
         },
         "type": {
           "type": "string",
-          "description": "CarbonFootprint"
+          "description": "Property. NGSI Entity type. It must be 'CarbonFootprint'"
         },
         "emissionSource": {
           "type": "string",
-          "description": "Source of emissions (e.g., Transport, Energy, Industry)."
+          "description": "Property. Source of emissions (e.g., Transport, Energy, Industry)."
         },
         "CO2eq": {
           "type": "number",
@@ -44,11 +44,16 @@
           "properties": {
             "type": {
               "type": "string",
-              "enum": ["Point"]
+              "enum": ["Point"],
+              "description": "Property. Type of GeoJSON geometry (Point)."
             },
             "coordinates": {
               "type": "array",
-              "items": {"type": "number"}
+              "description": "Property. Coordinates of the location in [longitude, latitude].",
+              "items": {
+                "type": "number",
+                "description": "Property. Coordinate value."
+              }
             }
           }
         },
@@ -59,12 +64,15 @@
         },
         "description": {
           "type": "string",
-          "description": "Additional information about the emissions source."
+          "description": "Property. Additional information about the emissions source."
         },
         "tags": {
           "type": "array",
-          "items": {"type": "string"},
-          "description": "Tags associated with the carbon footprint calculation."
+          "items": {
+            "type": "string",
+             "description": "Property. Tag name."
+          },
+          "description": Property. Tags associated with the carbon footprint calculation."
         }
       }
     }

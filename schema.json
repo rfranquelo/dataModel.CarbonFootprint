@@ -72,7 +72,7 @@
             "type": "string",
              "description": "Property. Tag name."
           },
-          "description": Property. Tags associated with the carbon footprint calculation."
+          "description": "Property. Tags associated with the carbon footprint calculation."
         }
       }
     }

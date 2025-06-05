@@ -31,5 +31,8 @@
   "tags": {
     "type": "Property",
     "value": ["transport", "CO2", "annual"]
-  }
+  },
+  "@context": [
+  "https://smartdatamodels.org/context.jsonld"
+]
 }

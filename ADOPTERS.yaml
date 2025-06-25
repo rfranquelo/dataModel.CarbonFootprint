@@ -1,9 +1,15 @@
 description: This is a compilation list of the current adopters of the data model Carbon Footprint of the Subject Environmental Data. All fields are non-mandatory. More info at https://smart-data-models.github.io/data-models/templates/dataModel/CURRENT_ADOPTERS.yaml
 currentAdopters:
   - adopter: "Raquel Franquelo"
-    description: "Software developer working on energy consumption tracking"
+    description: "Project manager certified in DataSpaces Fundamentals by IDSA"
     mail: "rfranquelo@purpleblob.net"
     organization: "Purple Blob"
-    project: "Carbon Footprint Tracker"
-    comments: "Using the model to integrate carbon emissions data into energy monitoring system."
+    project: "Hucain Dataspace"
+    comments: "Using the model to provide a service in the HUCAIN dataspace that enables companies to calculate their CO2 footprint."
     startDate: "2025-04-15"
+  - adopter: "Sarenet"
+    description: "Owner of Hucain project"
+    organization: "Sarenet"
+    project: "Hucain Dataspace"
+    comments: null
+    startDate: null
